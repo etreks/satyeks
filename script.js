@@ -28,7 +28,10 @@ if (window.location.protocol === 'file:') {
   document.querySelectorAll('a[href="vision/"], a[href="/vision"]').forEach((a) => {
     a.href = 'vision/index.html';
   });
-  if (window.location.pathname.includes('/variation/') || window.location.pathname.includes('/vision/')) {
+  document.querySelectorAll('a[href="RNN/"], a[href="/RNN"], a[href="rnn/"], a[href="/rnn"]').forEach((a) => {
+    a.href = 'RNN/index.html';
+  });
+  if (window.location.pathname.includes('/variation/') || window.location.pathname.includes('/vision/') || window.location.pathname.includes('/RNN/') || window.location.pathname.includes('/rnn/')) {
     document.querySelectorAll('a[href="../"], a[href="/"]').forEach((a) => {
       a.href = '../index.html';
     });
