@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satyeks</title>
+  <meta name="description" content="Satyeks — notes on variation, emergence and the universe.">
+  <meta name="theme-color" content="#DDDDDD">
+
+  <!-- Self-hosted fonts: Luke (logo) and Heimat Mono (Email) -->
+  <link rel="preload" href="fonts/Luke-Thin400.ttf" as="font" type="font/ttf" crossorigin>
+
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme') ||
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="logo" id="logo-link" aria-label="Satyeks home">Satyeks</a>
+    <a href="mailto:hello@satyeks.com" class="email" id="email-link">Email</a>
+  </header>
+
+  <main class="site-main">
+    <h1 class="sr-only">Satyeks</h1>
+
+    <article class="entry">
+      <h2 class="entry-title">
+        <a href="/variation" id="entry-variation-link">Notes on Variation, Emergence and Universe.</a>
+      </h2>
+      <p class="entry-summary">
+        Using a hypothetical universe with inverted electromagnetic forces, the article examines how different
+        rules might prevent or enable complexity. It proposes that stability, life, and intelligence may not be
+        predetermined goals, but outcomes that emerge when simple rules unfold over time.
+      </p>
+      <div class="entry-meta" data-duration="486">
+        <button class="play" id="entry-variation-play" type="button" aria-label="Play" aria-pressed="false">
+          <svg class="icon-play" width="9" height="11" viewBox="0 0 9 11" aria-hidden="true">
+            <path d="M0 1.2C0 .4.9-.1 1.6.3l6.8 4.3c.6.4.6 1.3 0 1.7L1.6 10.7C.9 11.1 0 10.6 0 9.8V1.2Z"/>
+          </svg>
+          <span class="icon-pause" aria-hidden="true"><span></span><span></span></span>
+        </button>
+        <span class="duration" aria-live="off">08:06</span>
+        <time class="date" datetime="2026-07">July 2026</time>
+      </div>
+    </article>
+  </main>
+
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+    <svg viewBox="0 0 14 14" aria-hidden="true">
+      <circle cx="7" cy="7" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M7 .75a6.25 6.25 0 0 1 0 12.5Z" fill="currentColor"/>
+    </svg>
+  </button>
+  <script src="script.js" defer></script>
+</body>
+</html>
