@@ -22,11 +22,11 @@
 
 // Ensure local file:// previewing works cleanly without breaking published http/https clean URLs
 if (window.location.protocol === 'file:') {
-  document.querySelectorAll('a[href="/variation"]').forEach((a) => {
+  document.querySelectorAll('a[href="variation/"], a[href="/variation"]').forEach((a) => {
     a.href = 'variation/index.html';
   });
   if (window.location.pathname.includes('/variation/')) {
-    document.querySelectorAll('a[href="/"]').forEach((a) => {
+    document.querySelectorAll('a[href="../"], a[href="/"]').forEach((a) => {
       a.href = '../index.html';
     });
   }
