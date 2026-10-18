@@ -25,7 +25,10 @@ if (window.location.protocol === 'file:') {
   document.querySelectorAll('a[href="variation/"], a[href="/variation"]').forEach((a) => {
     a.href = 'variation/index.html';
   });
-  if (window.location.pathname.includes('/variation/')) {
+  document.querySelectorAll('a[href="vision/"], a[href="/vision"]').forEach((a) => {
+    a.href = 'vision/index.html';
+  });
+  if (window.location.pathname.includes('/variation/') || window.location.pathname.includes('/vision/')) {
     document.querySelectorAll('a[href="../"], a[href="/"]').forEach((a) => {
       a.href = '../index.html';
     });
